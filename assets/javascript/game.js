@@ -10,14 +10,49 @@ var wordRandom = wordList[Math.floor(Math.random()*wordList.length)];
 
 //display the length of the word to the player
 
-var answerWord = [];
+var answerBlank = [];
 
 for (var i = 0; i < wordRandom.length; i++)   {
-    answerWord[i]="_";
+    answerBlank[i]="_";
 }
 
-var lettersRemaining = wordRandom.length;
-//prompt the player to guess a letter
+    var lettersRemaining = wordRandom.length;
+
+    //does this work? Yes
+console.log(wordRandom)
+console.log(answerBlank)
+console.log(lettersRemaining)
+
+    
+//This function is run when the player presses a key 
+    //determines pressed key
+document.onkeyup = function(event) {
+   
+    playerGuess = event.key;
+
+    if (playerGuess === null) {
+        document.getElementById("alert").innerHTML = "Select a Valid Letter";
+    }
+
+    for (var j = 0; j < wordRandom.length; j++) {
+        if (wordRandom[j] === playerGuess)  {
+            answerBlank[j] = playerGuess;
+            lettersRemaining--;
+        } 
+
+    }
+
+    console.log(playerGuess)
+    
+    }
+
+
+
+
+
+
+    //game loop
+
 
 
 //if the guess is correct increment add letter to length of work prompt
