@@ -1,3 +1,39 @@
-#hangman    {
-    text-align: center;
+.main-body  {
+    background-image: url("../images/grass.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 800px;
+    padding: 0;
+    margin: 0;
 }
+
+
+
+.top-of-game    {
+    text-align: center; 
+    background-image: url("../images/Busch.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+.text-in-body   {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 75px;
+    padding-top: 150px;
+    color: black;
+}
+
+#hangman-ball   {
+    color: red;
+}
+
+.any-key    {
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+}
+
